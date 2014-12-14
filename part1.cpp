@@ -1,17 +1,19 @@
-#include <iostream>
-#include <cmath>
-#include <limits>
-#include <assert.h>
-using namespace std;
+/*Author:Ken Durkin
+ *Course: CISC4080
+ *Assignment: Final - Part 1
+ *Submission: 12/16/14
+ */
 
-int INT_MIN = -INFINITY;
-int INT_MAX = +INFINITY;
+#include <iostream>
+#include <assert.h>
+#include <limits.h>
+using namespace std;
 
 int findKthSmallest(int A[], int m, int B[], int n, int k) {
 	assert(m >= 0); assert(n >= 0); assert(k > 0); assert(k <= m+n);
   
 	int i = (int)((double)m / (m+n) * (k-1));
-	int j = (k-1) - i;
+	int j = (k-1) - i; //i+j=k-1
  
 	assert(i >= 0); assert(j >= 0); assert(i <= m); assert(j <= n);
 	// invariant: i + j = k-1
@@ -42,33 +44,29 @@ int findKthSmallest(int A[], int m, int B[], int n, int k) {
 
 int main()
 {
-    int input = 0;
-    int A[100];
-    int lengthA = 0;
-    int B[100];
-    int lengthB = 0;
+	int m,n,k;
 
-    do {
-	if (cin>>input)
-	{
-	    A[lengthA]=input;
-	    lengthA++;
-	}
-    } while (input != -1);
+	cout << "Enter your first array length: ";
+	cin >> m;
+	int A[m];
+	cout << "Now enter " << m << " numbers:" << endl;
+	
+	for(int i=0;i<m;i++)
+		cin >> A[i];
 
-    cout << "Length of array A: " << lengthA << endl;
-    input = 0;
+	cout << "Enter your second array length: ";
+	cin >> n;
+	int B[n];
+	cout << "Now enter " << n << " numbers:" << endl;
 
-    do {
-	if (cin>>input)
-	{
-	    B[lengthB]=input;
-	    lengthB++;
-	}
-    } while (input != -1);
+	for(int j=0;j<n;j++)
+		cin >> B[j];
 
-    cout << "Length of array B: " << lengthB << endl;
-    input = 0;
+	cout << "Enter the kth smallest element to find: ";
+	cin >> k;
 
-    return 0;
+	int ans = findKthSmallest(A,m,B,n,k);
+	cout << k << "th smallest element is " << ans << endl;
+
+	return 0;
 }

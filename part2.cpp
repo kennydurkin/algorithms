@@ -1,3 +1,9 @@
+/*Author: Ken Durkin
+ *Course: CISC4080
+ *Assignment: Final Exam Part 2
+ *Submission: 12/16/14
+ */
+
 #include<iostream>
 using namespace std;
 
@@ -44,7 +50,7 @@ int main()
 	cin >> n;
 
 	int S[n];
-	cout << "Now insert 7 elements: " << endl;
+	cout << "Now insert " << n << " elements: " << endl;
 	for(int i=0;i<n;i++)
 		cin >> S[i];
 

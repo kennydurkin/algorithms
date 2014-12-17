@@ -1,3 +1,9 @@
+/*Author: Ken Durkin
+ *Course: CISC4080
+ *Assignment: Final Exam Part 1
+ *Submission: 12/16/14
+ */
+
 #include <iostream>
 #include <queue>
 #include "graph.h"

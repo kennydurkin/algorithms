@@ -1,3 +1,9 @@
+/*Author: Ken Durkin
+ *Course: CISC4080
+ *Assignment: Final Exam Part 3
+ *Submission: 12/16/14
+ */
+
 #ifndef GRAPH_H
 #define GRAPH_H
 
